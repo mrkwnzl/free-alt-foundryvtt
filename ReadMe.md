@@ -5,7 +5,7 @@
 ![GitHub All Releases](https://img.shields.io/github/downloads/mrkwnzl/free-alt-foundryvtt/total?style=flat-square)
 <a href="https://www.buymeacoffee.com/mrkwnzl" target="_blank">![Support](https://img.shields.io/badge/support-Buy%20Me%20a%20Coffee-blue?style=flat-square)</a>
 
-Some modules use the Alt key for some key bindings, but the Alt key also highlights all tokens on the canvas, which can be a bit distracting when using other modules and also hit the performance when there are lots of tokens on the canvas. This module adds a client-side setting that re-maps highlighting all tokens on the canvas from Alt to H, thus freeing Alt.
+Some modules use the Alt key for some key bindings, but the Alt key highlights all tokens on the canvas, which can be a bit distracting when using these modules and also hit the performance when there are lots of tokens on the canvas. This module adds a client-side setting that re-maps highlighting all tokens on the canvas from Alt to H, thus freeing Alt.
 
 **Note:** It’s not enough to activate this module. You also have to enable the settings in the Module Settings in order for them to take effect. This is because as a client-side setting (that is each player can set it up to personal preference) I thought it would be best to default to the default Foundry behavior.
 
