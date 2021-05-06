@@ -24,18 +24,28 @@ function _onKeyH(event, up) {
 }
 
 Hooks.on("init", function () {
-  game.settings.register("free-alt", "free-alt", {
-    name: "Re-Map Highlighting All Tokens to H",
-    hint: "This re-maps highlighting all tokens on the canvas from the Alt key to H on this client.",
-    scope: "client",
+  game.settings.register("free-alt", "set-world", {
+    name: "Free Alt on World",
+    hint: "This re-maps highlighting all tokens on the canvas from the Alt key to H on all connected clients, regardless of the client setting. Enabling this setting hides the Free Alt on Client setting.",
+    scope: "world",
     config: true,
     default: false,
     type: Boolean,
     onChange: () => location.reload(),
   });
 
+  game.settings.register("free-alt", "free-alt", {
+    name: "Free Alt on Client",
+    hint: "This re-maps highlighting all tokens on the canvas from the Alt key to H on this client.",
+    scope: "client",
+    config: !game.settings.get("free-alt", "set-world"),
+    default: false,
+    type: Boolean,
+    onChange: () => location.reload(),
+  });
+
   // Override default Foundry function for sliders
-  if (game.settings.get("free-alt", "free-alt")) {
+  if (game.settings.get("free-alt", "free-alt") || game.settings.get("free-alt", "set-world")) {
     KeyboardManager.prototype._onAlt = _onAlt_Override;
     const defaultHandleKeys = KeyboardManager.prototype._handleKeys;
     KeyboardManager.prototype._handleKeys = function(event, key, up) {
