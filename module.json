@@ -3,11 +3,11 @@
     "title": "Free Alt",
     "description": "Adds world- and client-side settings that re-map highlighting all tokens from Alt to H.",
     "author": "Marko Wenzel",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "minimumCoreVersion": "0.7.9",
-    "compatibleCoreVersion": "0.8.6",
+    "compatibleCoreVersion": "0.8.7",
     "esmodules": ["/free-alt.js"],
     "url": "https://github.com/mrkwnzl/free-alt-foundryvtt",
     "manifest": "https://raw.githubusercontent.com/mrkwnzl/free-alt-foundryvtt/main/module.json",
-    "download": "https://github.com/mrkwnzl/free-alt-foundryvtt/releases/download/v1.1.2/release.zip"
+    "download": "https://github.com/mrkwnzl/free-alt-foundryvtt/releases/download/v1.1.3/release.zip"
 }
