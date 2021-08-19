@@ -9,7 +9,7 @@ function _handleKeys_Override(event, key, up) {
   if (key.toLowerCase() === "h") originalOnAlt(event, up);
 }
 
-Hooks.on("init", function () {
+Hooks.on("init", function() {
   game.settings.register("free-alt", "set-world", {
     name: "Free Alt on World",
     hint: "This re-maps highlighting all tokens on the canvas from the Alt key to H on all connected clients, regardless of the client setting. Enabling this setting hides the Free Alt on Client setting.",
